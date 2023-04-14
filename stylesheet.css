@@ -1,0 +1,147 @@
+:root {
+  --tittle-color: rgb(15, 50, 39);
+  --paragraph-color: rgb(75, 83, 80) ;
+  --color-link: rgb(5, 79, 84);
+  --lightColor-link: rgb(9, 162, 136);
+  --bg-color: rgb(202, 247, 232);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+}
+
+.allContent {
+  --margin-sections: .66em
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2, strong {
+  color: var(--tittle-color);
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link)
+}
+
+a:hover {
+  color: var(--lightColor-link)
+}
+
+p, summary {
+  max-width: 70ch;
+  line-height: 1.6;
+  color: var(--paragraph-color)
+}
+
+small {
+  display: block;
+  text-align: center;
+  margin-bottom: var(--margin-sections);
+  font-style: italic;
+  color: var(--paragraph-color);
+}
+
+img {
+  max-width: 200px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+section {
+  max-width: 85vw;
+  margin-bottom: var(--margin-sections);
+}
+
+.form-control:focus {
+  border-color: rgb(134, 254, 192);
+  box-shadow: rgba(13, 253, 205, 0.25) 0px 0px 0px 0.25rem;
+}
+
+.modal-title {
+  font-size: 20pt;
+}
+
+.headContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-options {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.40em;
+}
+
+.say-hello {
+  display: block;
+  padding: .50em;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 2px solid var(--color-link);
+  color: var(--color-link);
+  font-weight: bold;
+  background-color: var(--bg-color);
+}
+
+.say-hello:hover {
+  color: var(--bg-color);
+  border: 2px solid var(--lightColor-link);
+  background-color: var(--lightColor-link);
+}
+
+.contact-option li {
+  margin: 0;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bullets li {
+  margin-left: 1.25em;
+}
+
+.bullets li::marker {
+  content: '➥';
+  cursor: pointer;
+  font-size: 12pt;
+  color: var(--lightColor-link)
+}
+
+.bullets li strong {
+  color: var(--color-link);
+  margin-left: 0.33em;
+}
+
+.link-active:hover {
+  color: var(--lightColor-link)
+}
+
+@media (max-width: 437px) { 
+
+  .headContent {
+    flex-direction: column;
+    margin-bottom: var(--margin-sections);
+  }
+}
